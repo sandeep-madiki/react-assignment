@@ -1,0 +1,56 @@
+.side-route-bg {
+  background-color: #fff;
+  width: 100%;
+}
+.side-route-main-bg {
+  height: 100vh;
+  width: 20%;
+  flex-shrink: 0;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.channel-logo-side {
+  width: 100px;
+  margin-left: 50px;
+}
+.select-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0px;
+}
+.select-text-items {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+.side-select-con {
+  padding-left: 0px;
+  list-style-type: none;
+}
+.side-social-logos-con {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.social-media-img {
+  width: 30px;
+}
+.contact-us {
+  color: #475569;
+  font-weight: bold;
+  font-size: 12px;
+}
+.side-des {
+  color: #475569;
+  font-size: medium;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 8px;
+}

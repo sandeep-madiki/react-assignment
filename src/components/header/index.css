@@ -1,0 +1,20 @@
+.nav-con {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 64%;
+  background-color: #fff;
+}
+.header-profile {
+  width: 30px;
+  margin-left: 22px;
+}
+.logout-btn {
+  background-color: transparent;
+  padding: 4px 8px;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  margin-left: 22px;
+  cursor: pointer;
+}

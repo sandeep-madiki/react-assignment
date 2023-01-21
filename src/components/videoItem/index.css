@@ -1,0 +1,57 @@
+.video-item-list {
+  list-style-type: none;
+  width: 32%;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto';
+}
+.thumbnail-img {
+  width: 100%;
+}
+.video-details-con {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+}
+.profile-img {
+  width: 35px;
+  height: 35px;
+  align-self: flex-start;
+  margin-top: 18px;
+}
+.profile-img-con {
+  align-self: flex-start;
+  width: 26%;
+  display: flex;
+  justify-content: center;
+}
+.views-date-con {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+.title {
+  color: #181818;
+  font-size: 14px;
+  font-weight: 500;
+}
+.name {
+  color: #616e7c;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.details-text {
+  margin-top: 0px;
+}
+.dot {
+  color: #616e7c;
+}
+.time {
+  color: #616e7c;
+  font-size: 14px;
+  font-weight: 500;
+}
+.link-item {
+  text-decoration: none;
+}
