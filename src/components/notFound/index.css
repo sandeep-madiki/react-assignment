@@ -1,0 +1,15 @@
+.not-found-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.not-found-img {
+  width: 300px;
+  margin-top: 58px;
+}
+.not-found-des {
+  color: #7e858e;
+  font-weight: 500;
+}

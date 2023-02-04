@@ -1,20 +1,60 @@
-.nav-con {
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 64%;
-  background-color: #fff;
-}
 .header-profile {
   width: 30px;
   margin-left: 22px;
 }
-.logout-btn {
+@media (max-width: 576px) {
+  .header-profile {
+    display: none;
+  }
+}
+.popup-con {
+  background-color: #424242;
+  padding: 28px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popup-btns-con {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.popup-warn {
+  color: #f9f9f9;
+}
+.cancel-btn {
   background-color: transparent;
-  padding: 4px 8px;
-  border: 1px solid #3b82f6;
-  color: #3b82f6;
-  margin-left: 22px;
+  color: #909090;
+  border: 1px solid #909090;
+  border-radius: 3px;
+  padding: 8px 20px;
+  font-weight: 500;
   cursor: pointer;
+  margin: 5px;
+}
+.confirm-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 5px;
+}
+.header-logo {
+  width: 100px;
+  margin-left: 20px;
+}
+
+@media (min-width: 576px) {
+  .header-logo {
+    display: none;
+  }
+}
+.test-2 {
+  display: flex;
+  align-items: center;
 }

@@ -2,7 +2,7 @@ import {Component} from 'react'
 import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
-// import './index.css'
+import './index.css'
 
 class Login extends Component {
   state = {
@@ -95,7 +95,6 @@ class Login extends Component {
 
   render() {
     const jwtToken = Cookies.get('jwt_token')
-    console.log(jwtToken)
     if (jwtToken !== undefined) <Redirect to="/" />
     const {showErrMsg, errorMessage} = this.state
     return (

@@ -1,0 +1,30 @@
+.saved-item-con {
+  width: 75%;
+  max-width: 1720px;
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+}
+.s-img {
+  width: 50%;
+}
+.s-channel {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 14px;
+}
+.s-details {
+  margin-left: 18px;
+}
+.time-con {
+  display: flex;
+  align-items: center;
+  color: #475569;
+  font-weight: 500;
+  font-size: 14px;
+  color: #64748b;
+}
+.dot-1 {
+  margin-left: 3px;
+  margin-right: 3px;
+}

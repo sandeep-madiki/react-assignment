@@ -1,0 +1,19 @@
+.game-list-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+  width: 75vw;
+  margin-left: 10%;
+}
+@media (max-width: 576px) {
+  .game-list-con {
+    width: 100%;
+    padding-left: 0px;
+  }
+}
+.t-test-2 {
+  display: flex;
+  align-items: center;
+}

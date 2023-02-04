@@ -1,0 +1,44 @@
+.saved-con {
+  flex-grow: 2;
+  font-family: 'Roboto';
+}
+.saved-banner {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  padding-left: 28px;
+}
+.saved-icon-con {
+  background-color: #e2e8f0;
+  height: 70px;
+  width: 70px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff0000;
+}
+.saved-videos {
+  font-weight: 600;
+  margin-left: 15px;
+}
+.saved-items-con {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 28px;
+}
+.no-saved-con {
+  background-color: #f1f1f1;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-saved-img {
+  width: 30%;
+}

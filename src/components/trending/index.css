@@ -1,0 +1,25 @@
+.trending-banner-bg {
+  background-color: #f9f9f9;
+  padding: 8px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+.trending-videos-bg {
+  background-color: #f8fafc;
+  padding: 14px;
+}
+.t-icon {
+  color: #ff0b37;
+}
+.new-con {
+  overflow-y: scroll;
+  height: 100vh;
+  min-width: 75%;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+}

@@ -30,11 +30,6 @@
   align-items: center;
   margin-top: 0px;
 }
-.title {
-  color: #181818;
-  font-size: 14px;
-  font-weight: 500;
-}
 .name {
   color: #616e7c;
   font-size: 14px;
@@ -54,4 +49,17 @@
 }
 .link-item {
   text-decoration: none;
+}
+@media (max-width: 576px) {
+  .video-item-list {
+    width: 100%;
+  }
+  .test-3 {
+    display: flex;
+    align-items: center;
+  }
+  .name {
+    margin-top: 0px;
+    margin-right: 14px;
+  }
 }

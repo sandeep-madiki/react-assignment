@@ -1,6 +1,11 @@
 .home-test-bg {
   height: 100vh;
   overflow-y: scroll;
+  min-width: 75%;
+  flex-grow: 2;
+}
+.flexing {
+  display: flex;
 }
 .home-bg {
   background-color: #000;
@@ -8,15 +13,6 @@
 .img {
   width: 500px;
   height: 500px;
-}
-.banner-con {
-  background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
-  padding: 24px;
-  height: 40vh;
-  width: 100%;
-  background-size: cover;
-  display: flex;
-  justify-content: space-between;
 }
 .banner-des {
   color: #1e293b;
@@ -26,6 +22,13 @@
   line-height: 1.5;
   width: 400px;
 }
+@media (max-width: 576px) {
+  .banner-des {
+    font-size: 17px;
+    line-height: 1.2;
+    width: 240px;
+  }
+}
 .banner-btn {
   background-color: transparent;
   color: #0f0f0f;
@@ -33,6 +36,7 @@
   padding: 6px 10px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 14px;
 }
 .home-main-bg {
   background-color: #f9f9f9;
@@ -73,10 +77,64 @@
   align-items: center;
   width: 50%;
 }
+@media (max-width: 576px) {
+  .search-input-con {
+    width: 100%;
+  }
+}
 .videos-list-con {
   padding-left: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+.no-videos-bg {
+  background-color: #f1f1f1;
+  min-height: 80vh;
+  flex-grow: 2;
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-videos-img {
+  width: 28%;
+}
+.no-search-heading {
+  font-size: 22px;
+}
+.no-search-des {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+.no-search-retry-btn {
+  background-color: #4f46e5;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 7px 18px;
+}
+.loader-container {
+  width: 100vw;
+  min-height: 100vh;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-container-1 {
+  min-width: 80vw;
+  height: 40vh;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

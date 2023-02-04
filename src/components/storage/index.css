@@ -1,0 +1,44 @@
+.trending-banner-bg {
+  background-color: #f9f9f9;
+  padding: 8px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+.trending-videos-bg {
+  background-color: #f8fafc;
+  padding: 14px;
+}
+.t-icon {
+  color: #ff0b37;
+}
+.t-icon-con {
+  background-color: #e2e8f0;
+  height: 55px;
+  width: 55px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.trending {
+  color: #0f0f0f;
+  font-size: 28px;
+  font-weight: bold;
+}
+.new-con-1 {
+  overflow-y: scroll;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+.t-test-2 {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding-left: 18px;
+}

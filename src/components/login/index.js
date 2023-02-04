@@ -1,8 +1,15 @@
 import {Component} from 'react'
-import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import './index.css'
+import NxtContext from '../../context/context'
+
+import {LoginMainBg, LoginBg, Label, ShowPassword} from './styledComponents'
+
+const LightLogo =
+  'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
+const DarkLogo =
+  'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
 
 class Login extends Component {
   state = {
@@ -22,34 +29,50 @@ class Login extends Component {
   }
 
   renderUsernameField = () => (
-    <>
-      <label className="label" htmlFor="username">
-        USERNAME
-      </label>
-      <input
-        className="input-el"
-        type="text"
-        id="username"
-        onChange={this.getUsername}
-      />
-    </>
+    <NxtContext.Consumer>
+      {value => {
+        const {darkMode} = value
+        return (
+          <>
+            <Label dark={darkMode} htmlFor="username">
+              USERNAME
+            </Label>
+            <input
+              className="input-el"
+              type="text"
+              id="username"
+              placeholder="Username"
+              onChange={this.getUsername}
+            />
+          </>
+        )
+      }}
+    </NxtContext.Consumer>
   )
 
   renderPasswordField = () => {
     const {showPassword} = this.state
     const passwordType = showPassword ? 'text' : 'password'
     return (
-      <>
-        <label className="label" htmlFor="password">
-          PASSWORD
-        </label>
-        <input
-          className="input-el"
-          type={passwordType}
-          id="password"
-          onChange={this.getPassword}
-        />
-      </>
+      <NxtContext.Consumer>
+        {value => {
+          const {darkMode} = value
+          return (
+            <>
+              <Label dark={darkMode} htmlFor="password">
+                PASSWORD
+              </Label>
+              <input
+                className="input-el"
+                type={passwordType}
+                id="password"
+                placeholder="Password"
+                onChange={this.getPassword}
+              />
+            </>
+          )
+        }}
+      </NxtContext.Consumer>
     )
   }
 
@@ -94,35 +117,39 @@ class Login extends Component {
   }
 
   render() {
-    const jwtToken = Cookies.get('jwt_token')
-    if (jwtToken !== undefined) <Redirect to="/" />
     const {showErrMsg, errorMessage} = this.state
     return (
-      <div className="login-main-bg">
-        <form onSubmit={this.submitForm} className="login-bg">
-          <img
-            className="channel-logo"
-            src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-            alt="channel logo"
-          />
-          {this.renderUsernameField()}
-          {this.renderPasswordField()}
-          <div className="checkbox-con">
-            <input
-              id="showPassword"
-              type="checkbox"
-              onClick={this.changePasswordType}
-            />
-            <label htmlFor="showPassword" className="show-password">
-              Show Password
-            </label>
-          </div>
-          <button className="login-btn" type="submit">
-            Login
-          </button>
-          {showErrMsg && <p className="error-msg">{`* ${errorMessage}`}</p>}
-        </form>
-      </div>
+      <NxtContext.Consumer>
+        {value => {
+          const {darkMode} = value
+          const logo = darkMode ? DarkLogo : LightLogo
+          return (
+            <LoginMainBg dark={darkMode}>
+              <LoginBg onSubmit={this.submitForm} dark={darkMode}>
+                <img className="channel-logo" src={logo} alt="website logo" />
+                {this.renderUsernameField()}
+                {this.renderPasswordField()}
+                <div className="checkbox-con">
+                  <input
+                    id="showPassword"
+                    type="checkbox"
+                    onClick={this.changePasswordType}
+                  />
+                  <ShowPassword htmlFor="showPassword" dark={darkMode}>
+                    Show Password
+                  </ShowPassword>
+                </div>
+                <button className="login-btn" type="submit">
+                  Login
+                </button>
+                {showErrMsg && (
+                  <p className="error-msg">{`* ${errorMessage}`}</p>
+                )}
+              </LoginBg>
+            </LoginMainBg>
+          )
+        }}
+      </NxtContext.Consumer>
     )
   }
 }
